@@ -15,7 +15,7 @@
 
 ### 2. DKIM rekord
 - Ezt domain specifikusan kell létrehozni, amennyiben a beépített DNS kezelőt használja, ez automatikusan létrehozásra kerül.
-- A DKIM (DomainKeys Identified Mail) egy email hitelesítési módszer, amely segít ellenőrizni, hogy az email valóban a te domainedről lett küldve, és nem módosították az út során. A DKIM beállítása erősen ajánlott az email kézbesíthetőség és biztonság javítása érdekében.
+- A DKIM (DomainKeys Identified Mail) egy email hitelesítési módszer, amely segít ellenőrizni, hogy az email valóban az Ön domain címéről lett küldve, és nem módosították az út során. A DKIM beállítása erősen ajánlott az email kézbesíthetőség és biztonság javítása érdekében.
 
 ### 3. DMARC rekord
 - A  DMARC (Domain-based Message Authentication, Reporting, and Conformance) segít megvédeni a domained az email hamisítástól, és betekintést ad az email hitelesítési eredményekbe. A DMARC beállítása minden domainhez ajánlott a jobb email kézbesíthetőség és biztonság érdekében.
@@ -42,7 +42,7 @@
 - Alias címek: amennyiben ezekre a címekre jön levél, azt is az elsődlegesen keresztül fogja továbbítani.
 - Továbbítások: minden érkező levelet egy vagy több másik címre továbbít automatikusan.
 - Haladó beállítások: védelmi intézkedések és víruskeresést **nem ajánlott** kikapcsolni semmi esetben sem. Emellé célszerű a **spamszűrőt** is beállítani.
-- XX napnél régebbi elemek törlése spam mappából / kukából: tárhely megtakarítás miatt ajánlott beállítani.
+- XX napnál régebbi elemek törlése spam mappából / kukából: tárhely megtakarítás miatt ajánlott beállítani.
 
 ## Email fiók használata
 
@@ -54,5 +54,5 @@
 
 ## Megjegyzás
 
-- A tárhelyhez kapcsolódó levelezést **szigorúan tilos** hírlevél és spam küldésre használni. Bővenn információkért tekintse át az [Általános Szerződési Feltételeket](https://1sw3fse.vipy.hu/vipy/web/docs/ASZF.pdf).
-- Célünk a megbízható, mindenhova megérkező levelek küldése.
+- A tárhelyhez kapcsolódó levelezést **szigorúan tilos** hírlevél és spam küldésre használni. Bővebb információkért tekintse át az [Általános Szerződési Feltételeket](https://1sw3fse.vipy.hu/vipy/web/docs/ASZF.pdf).
+- Célunk a megbízható, mindenhova megérkező levelek küldése.

@@ -6,7 +6,7 @@
 - [Kattintson ide](https://download.wireguard.com/windows-client/wireguard-installer.exe) a letöltéshez és telepítse fel.
 
 ### 2. Konfiguráció létrehozása
-- [Ezen az odalon](https://dbca-wa.github.io/wg-webcfg/wg-webcfg.html) töltse ki a **Server** mezőt a VPS ip címével, és ha több kliensre van szüksége növelje a kliensek számát.
+- [Ezen az odalon](https://dbca-wa.github.io/wg-webcfg/wg-webcfg.html) töltse ki a **Server** mezőt a VPS IP-címével, és ha több kliensre van szüksége növelje a kliensek számát.
 - Ezután kattintson a **Generate** gombra.
 
 ### 3. Wireguard beállítása

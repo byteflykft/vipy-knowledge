@@ -9,10 +9,11 @@
 ## 2. Connection
 - Open the Putty application after installation and enter your hosting server’s address in the **Hostname** field, e.g. `kw1.vipy.hu`. Keep the default port `22`, then click **Open**.
 
+:::warning Never share your password with others. If necessary, change it immediately for security.:::
+
 ![Putty Open](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/hu/webhosting/images/putty.png)
 
 - For the username, enter your account name as shown in the client portal, e.g. `client1`.
 - The password is the same as your hosting account password. If you change it in the panel, it will also change for SSH access.
-- Each hosting account has only one SSH user, which has full access to all files on your web hosting space.
 
-:::warning Never share your password with others. If necessary, change it immediately for security.:::
+:::danger Each hosting account has only one SSH user, which has full access to all files on your web hosting space.:::
