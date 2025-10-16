@@ -16,7 +16,7 @@
 ### 4. Configure the Firewall
 - Open the **Windows Defender Firewall with Advanced Security** application and go to the **Inbound Rules** section.
 - Find the rules named **Remote Desktop - User Mode (TCP-In)** and **Remote Desktop - User Mode (UDP-In)** (Port: 3389).
-- Click on the first one, then open the **Scope** tab and under **Remote IP address**, select **These IP addresses**, then **Add...**, enter **172.17.172.0/24**, and click **Apply** and **OK**.
+- Click on the first one, then open the **Scope** tab and under **Remote IP address**, select **These IP addresses**, then **Add...**, enter `172.17.172.0/24`, and click **Apply** and **OK**.
 - Repeat the same for the other rule, and you’re done.
 
 ## Installation on your local computer
@@ -29,4 +29,4 @@
 - Then click **Save**, and if the setup is correct, the connection will become active.
 
 ### 3. Connect via RDP
-- Open the **Remote Desktop Connection** application and, by default, connect to **172.17.172.1**. (Provided that the server configuration includes **Address = 172.17.172.1/24**.)
+- Open the **Remote Desktop Connection** application and, by default, connect to `172.17.172.1`. (Provided that the server configuration includes `Address = 172.17.172.1/24`.)
