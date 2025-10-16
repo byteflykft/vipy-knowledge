@@ -52,7 +52,7 @@
 ### 2. Gmail vagy egyéb klienshez hozzáadás
 - Csatlakozási adatokat megjelenítve láthatja, hogyan tud csatlakozni postafiókjához.
 
-## Megjegyzás
+## Megjegyzés
 
 - A tárhelyhez kapcsolódó levelezést **szigorúan tilos** hírlevél és spam küldésre használni. Bővebb információkért tekintse át az [Általános Szerződési Feltételeket](https://1sw3fse.vipy.hu/vipy/web/docs/ASZF.pdf).
 - Célunk a megbízható, mindenhova megérkező levelek küldése.

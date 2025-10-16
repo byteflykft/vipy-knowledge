@@ -17,7 +17,7 @@
 - Aldomainek: ebben az esetben a már létező aldomain-ekre is érvényes lesz.
 
 ### Értelmező
-- PHP értelmező: Ezzel a PHP verizóval fog futni weboldala.
+- PHP értelmező: Ezzel a PHP verzióval fog futni weboldala.
 - PHP értelmező alkalmazása az összes aldomainre: ennek szerkesztéskor van jelentősége, amennyiben bejelöli és úgy menti, minden aldomain-re ez lesz érvényes.
 
 ## Névszerverek beállítása
