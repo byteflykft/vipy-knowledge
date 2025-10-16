@@ -1,12 +1,12 @@
 # SSH hozzáférés
 
-**SSH** hozzáférés sok esetben lehet hasznos, ilyen például a composer, php artisan vagy akár git parancsok futtatása. Tekints át hogyan tud csatlakozni a VIPY webtárhely szolgáltatásához járó tárhelyhez.
+**SSH** hozzáférés sok esetben lehet hasznos, ilyen például a composer, php artisan vagy akár git parancsok futtatása. Tekintse át hogyan tud csatlakozni a VIPY webtárhelyéhez.
 
 ## 1. SSH alkalmazás
 - Célszerű egy kényelmes alkalmazást választani [Termius](https://termius.com/), de akár [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) vagy simán terminálból is tudunk csatlakozni.
 - Ebben a bemutatóban a Putty-hoz mellékelünk instrukciókat, de mindenhol hasonló.
 
-## 2, Csatlakozás
+## 2. Csatlakozás
 - Nyissa meg a Putty alkalmazást letöltés után, majd írja be a **Hostname** mezőbe a tárhely szervere címét. Pl.: `kw1.vipy.hu`, portot pedig alapértelmezett `22`-es hagyjuk, majd kattintson az **Open** gombra.
 
 ![Putty Open](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/hu/webhosting/images/putty.png)
