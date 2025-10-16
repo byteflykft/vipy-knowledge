@@ -21,9 +21,9 @@
 ## Alerts
 
 :::danger This is a red danger message.:::
-:::warning This is a red danger message.:::
-:::info This is a red danger message.:::
-:::success This is a red danger message.:::
+:::warning This is a red warning message.:::
+:::info This is a red info message.:::
+:::success This is a red success message.:::
 :::quote This is a simple quote.:::
 
 ```md
@@ -49,14 +49,14 @@ const orderedMatch = trimmed.match(/^(\d+)\.\s+(.*)/);
 
 ## Text decoration
 
-**kaka**
-_kaka_
-`kaka`
+**bold**
+_italic_
+`inline code`
 
 ```md
-**kaka**
-_kaka_
-`kaka`
+**bold**
+_italic_
+`inline code`
 ```
 
 ## Links
