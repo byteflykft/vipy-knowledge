@@ -52,7 +52,7 @@ valamint azt is, hogyan működik az **SSH kulcsos belépés**, ha az a **bérl�
   * **Jelszó:** e-mailben kapott jelszó
 * Sikeres hitelesítés után megjelenik a szerver asztala
 
-:::info ℹ️ Ha tanúsítványra vonatkozó figyelmeztetés jelenik meg, kattintson az **Igen** gombra.
+:::info ℹ️ Ha tanúsítványra vonatkozó figyelmeztetés jelenik meg, kattintson az **Igen** gombra. :::
 
 
 
@@ -105,7 +105,7 @@ Kattintson az **Open** gombra.
 * **login as:** → felhasználónév (pl. `root`)
 * **password:** → jelszó
 
-:::warning ⚠️ Jelszó gépelésekor nem jelenik meg karakter – ez normális.
+:::warning ⚠️ Jelszó gépelésekor nem jelenik meg karakter – ez normális. :::
 
 
 

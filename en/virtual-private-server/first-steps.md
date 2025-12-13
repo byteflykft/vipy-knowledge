@@ -2,7 +2,7 @@
 
 This guide explains the **required / strongly recommended** steps to complete **after your first login** to the VPS to keep it secure and stable.
 
-:::info ℹ️ For first access (RDP / SSH / SSH key), see: [Connect to a server (Windows RDP and Linux SSH)](https://vipy.hu/en/article/connect-to-vps).
+:::info ℹ️ For first access (RDP / SSH / SSH key), see: [Connect to a server (Windows RDP and Linux SSH)](https://vipy.hu/en/article/connect-to-vps). :::
 
 
 
@@ -40,7 +40,7 @@ WireGuard guide:
 ![Change your password screen](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/en/virtual-private-server/images/windows-change-password.png)  
 *Enter and confirm your new password.*
 
-:::info ℹ️ Recommended test: close your RDP session and reconnect using the **new password**.
+:::info ℹ️ Recommended test: close your RDP session and reconnect using the **new password**. :::
 
 
 
@@ -58,7 +58,7 @@ WireGuard guide:
 ![Windows Update – install updates / restart](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/en/virtual-private-server/images/windows-update.png)  
 *If you see “Restart required”, click **Restart now**.*
 
-:::warning ⚠️ Updates and restarts may be required in multiple rounds.
+:::warning ⚠️ Updates and restarts may be required in multiple rounds. :::
 
 
 
@@ -100,7 +100,7 @@ WireGuard guide:
 ![Internet Time – set time.vipy.hu](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/en/virtual-private-server/images/windows-internet-time-settings.png)  
 *Enable **Synchronize with an Internet time server**, then set **Server: time.vipy.hu** → **Update now**.*
 
-:::info ℹ️ Important: The time server must always be set to `time.vipy.hu`, because only this server is allowed.
+:::info ℹ️ Important: The time server must always be set to `time.vipy.hu`, because only this server is allowed. :::
 
 
 
@@ -163,7 +163,7 @@ nano /etc/chrony/chrony.conf
 pool time.vipy.hu iburst
 ```
 
-:::info ℹ️ It is recommended to remove or comment out other `pool` / `server` lines so that only **time.vipy.hu** remains.
+:::info ℹ️ It is recommended to remove or comment out other `pool` / `server` lines so that only **time.vipy.hu** remains. :::
 
 ![Chrony configuration – time.vipy.hu](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/en/virtual-private-server/images/linux-chrony-conf.png)
 *Example configuration for the `time.vipy.hu` time server.*
@@ -174,7 +174,7 @@ pool time.vipy.hu iburst
 systemctl restart chrony
 ```
 
-:::info ℹ️ Important: The time server must always be set to `time.vipy.hu`, because only this server is allowed.
+:::info ℹ️ Important: The time server must always be set to `time.vipy.hu`, because only this server is allowed. :::
 
 
 

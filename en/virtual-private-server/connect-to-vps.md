@@ -51,7 +51,7 @@ and also how **SSH key-based authentication** works if it was configured **durin
   * **Password:** the password received via email
 * After successful authentication, the server desktop will appear
 
-:::info ℹ️ If a certificate warning appears, click **Yes** to continue.
+:::info ℹ️ If a certificate warning appears, click **Yes** to continue. :::
 
 
 
@@ -104,7 +104,7 @@ Click **Open**.
 * **login as:** → username (e.g. `root`)
 * **password:** → password
 
-:::warning ⚠️ No characters will appear while typing the password — this is normal.
+:::warning ⚠️ No characters will appear while typing the password — this is normal. :::
 
 
 
