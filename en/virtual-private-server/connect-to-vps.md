@@ -51,7 +51,7 @@ and also how **SSH key-based authentication** works if it was configured **durin
   * **Password:** the password received via email
 * After successful authentication, the server desktop will appear
 
-:::info ℹ️ If a certificate warning appears, click **Yes** to continue. :::
+:::info ℹ️ If a certificate warning appears, click Yes to continue. :::
 
 
 

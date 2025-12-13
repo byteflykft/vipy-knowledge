@@ -2,8 +2,7 @@
 
 This guide explains the **required / strongly recommended** steps to complete **after your first login** to the VPS to keep it secure and stable.
 
-:::info ℹ️ For first access (RDP / SSH / SSH key), see: [Connect to a server (Windows RDP and Linux SSH)](https://vipy.hu/en/article/connect-to-vps). :::
-
+For first access (RDP / SSH / SSH key), see: [Connect to a server (Windows RDP and Linux SSH)](https://vipy.hu/en/article/connect-to-vps)
 
 
 ## Recommendation: Use VPN only for RDP and SSH (WireGuard)
@@ -13,7 +12,7 @@ It is strongly recommended that whenever possible:
 - and ports 3389/22 are **not exposed to the public internet**.
 
 WireGuard guide:  
-- https://vipy.hu/en/article/windows-rdp-wireguard
+- [https://vipy.hu/en/article/windows-rdp-wireguard](https://vipy.hu/en/article/windows-rdp-wireguard)
 
 
 
@@ -40,7 +39,7 @@ WireGuard guide:
 ![Change your password screen](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/en/virtual-private-server/images/windows-change-password.png)  
 *Enter and confirm your new password.*
 
-:::info ℹ️ Recommended test: close your RDP session and reconnect using the **new password**. :::
+:::info ℹ️ Recommended test: close your RDP session and reconnect using the new password. :::
 
 
 
@@ -135,7 +134,7 @@ reboot
 
 ### 3. Configure time zone and time server
 
-Linux VPS instances use **chrony** for time synchronization, and **only** the `time.vipy.hu` time server is allowed.
+Linux VPS instances use **chrony** for time synchronization, and only the `time.vipy.hu` time server is allowed.
 
 #### 3.1 Set the time zone
 

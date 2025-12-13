@@ -2,7 +2,7 @@
 
 Ez az útmutató bemutatja, milyen **kötelező / erősen ajánlott** lépéseket érdemes elvégezni **az első belépés után** a VPS-en, hogy biztonságosabb és stabilabb legyen a rendszer.
 
-:::info ℹ️ Az első belépéshez (RDP / SSH / SSH kulcs) lásd: [Távoli csatlakozás szerverhez (Windows RDP és Linux SSH)](https://vipy.hu/hu/article/connect-to-vps). :::
+Az első belépéshez (RDP / SSH / SSH kulcs) lásd: [Távoli csatlakozás szerverhez (Windows RDP és Linux SSH)](https://vipy.hu/hu/article/connect-to-vps).
 
 ## Ajánlás: RDP és SSH csak VPN-en keresztül (WireGuard)
 
@@ -11,7 +11,8 @@ Erősen ajánlott, hogy ahol lehet:
 - és **ne legyen nyitva a világ felé** a 3389/22 port.
 
 WireGuard útmutató:  
-- https://vipy.hu/hu/article/windows-rdp-wireguard
+- [https://vipy.hu/hu/article/windows-rdp-wireguard](https://vipy.hu/hu/article/windows-rdp-wireguard)
+
 
 
 ## Windows VPS – jelszócsere és alap beállítások
@@ -37,7 +38,7 @@ WireGuard útmutató:
 ![Jelszó módosítása képernyő (Change your password)](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/hu/virtual-private-server/images/windows-change-password.png)
 *Új jelszó megadása és megerősítése.*
 
-:::info ℹ️ Javasolt teszt: zárja be az RDP-t és csatlakozzon újra az **új jelszóval**. :::
+:::info ℹ️ Javasolt teszt: zárja be az RDP-t és csatlakozzon újra az új jelszóval. :::
 
 
 
@@ -132,7 +133,7 @@ reboot
 
 ### 3. Időzóna + időszerver beállítása
 
-A Linux VPS-eken **chrony** van telepítve időszinkronhoz, és **csak a `time.vipy.hu` időszerver engedélyezett**.
+A Linux VPS-eken **chrony** van telepítve időszinkronhoz, és csak a `time.vipy.hu` időszerver engedélyezett.
 
 #### 3.1 Időzóna beállítása
 
@@ -160,7 +161,7 @@ nano /etc/chrony/chrony.conf
 pool time.vipy.hu iburst
 ```
 
-:::info ℹ️ Ajánlott, hogy a többi `pool` / `server` sor törlésre vagy kikommentelésre kerüljön, hogy csak a **time.vipy.hu** maradjon. :::
+:::info ℹ️ Ajánlott, hogy a többi `pool` / `server` sor törlésre vagy kikommentelésre kerüljön, hogy csak a time.vipy.hu maradjon. :::
 
 ![Chrony beállítás – time.vipy.hu](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/hu/virtual-private-server/images/linux-chrony-conf.png)
 *Példa beállítás a `time.vipy.hu` időszerverhez.*
