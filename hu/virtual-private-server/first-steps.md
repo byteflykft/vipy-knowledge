@@ -4,8 +4,6 @@ Ez az útmutató bemutatja, milyen **kötelező / erősen ajánlott** lépéseke
 
 > ℹ️ Az első belépéshez (RDP / SSH / SSH kulcs) lásd: [Távoli csatlakozás szerverhez (Windows RDP és Linux SSH)](https://vipy.hu/hu/article/connect-to-vps).
 
----
-
 ## Ajánlás: RDP és SSH csak VPN-en keresztül (WireGuard)
 
 Erősen ajánlott, hogy ahol lehet:
@@ -15,7 +13,6 @@ Erősen ajánlott, hogy ahol lehet:
 WireGuard útmutató:  
 - https://vipy.hu/hu/article/windows-rdp-wireguard
 
----
 
 ## Windows VPS – jelszócsere és alap beállítások
 
@@ -34,15 +31,15 @@ WireGuard útmutató:
 6. Mentés / befejezés:
    - **Tovább / Next** → **Befejezés / Finish** *(a gombok elnevezése verziótól függhet)*
 
-![Beállítások → Fiókok → Bejelentkezési lehetőségek (Sign-in options)](./images/windows-signin-options.png)
+![Beállítások → Fiókok → Bejelentkezési lehetőségek (Sign-in options)](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/hu/virtual-private-server/images/windows-signin-options.png)
 *Itt található a **Jelszó / Password → Módosítás / Change** gomb.*
 
-![Jelszó módosítása képernyő (Change your password)](./images/windows-change-password.png)
+![Jelszó módosítása képernyő (Change your password)](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/hu/virtual-private-server/images/windows-change-password.png)
 *Új jelszó megadása és megerősítése.*
 
-> ℹ️ Javasolt teszt: zárja be az RDP-t és csatlakozzon újra az **új jelszóval**.
+:::info ℹ️ Javasolt teszt: zárja be az RDP-t és csatlakozzon újra az **új jelszóval**.
 
----
+
 
 ### 2. Windows Update futtatása
 
@@ -55,12 +52,12 @@ WireGuard útmutató:
 5. Ha kéri, indítsa újra:
    - **Újraindítás most / Restart now**
 
-![Windows Update – frissítések telepítése / újraindítás](./images/windows-update.png)
+![Windows Update – frissítések telepítése / újraindítás](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/hu/virtual-private-server/images/windows-update.png)
 *Ha “Restart required / Újraindítás szükséges” látható, kattintson a **Restart now / Újraindítás most** gombra.*
 
-> ⚠️ Előfordulhat, hogy több körben is lesz frissítés + újraindítás.
+:::warning ⚠️ Előfordulhat, hogy több körben is lesz frissítés + újraindítás.
 
----
+
 
 ### 3. Időzóna + időszerver beállítása
 
@@ -74,7 +71,7 @@ WireGuard útmutató:
 4. Állítsa be az időzónát:
    - **Időzóna / Time zone: (UTC+01:00) Budapest**
 
-![Időzóna beállítása – Time & language → Date & time](./images/windows-date-time.png)
+![Időzóna beállítása – Time & language → Date & time](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/hu/virtual-private-server/images/windows-date-time.png)
 *Itt állítható be az **Időzóna / Time zone** (pl. (UTC+01:00) Budapest).*
 
 #### 3.2 Időszerver beállítása: `time.vipy.hu`
@@ -97,12 +94,12 @@ WireGuard útmutató:
 **Opció B (klasszikus útvonal / Classic path):**
 - **Vezérlőpult / Control Panel → Dátum és idő / Date and Time → Internet-idő / Internet Time → Beállítások módosítása… / Change settings…**
 
-![Internet Time – time.vipy.hu beállítása](./images/windows-internet-time-settings.png)
+![Internet Time – time.vipy.hu beállítása](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/hu/virtual-private-server/images/windows-internet-time-settings.png)
 *Pipálja be: **Synchronize with an Internet time server**, majd **Server: time.vipy.hu** → **Update now**.*
 
-> ℹ️ Fontos: Időszervernek minden esetben a `time.vipy.hu` legyen beállítva, mert csak ez engedélyezett.
+:::info ℹ️ Fontos: Időszervernek minden esetben a `time.vipy.hu` legyen beállítva, mert csak ez engedélyezett.
 
----
+
 
 ## Linux VPS – jelszócsere és alap beállítások
 
@@ -114,7 +111,7 @@ SSH belépés után futtassa:
 passwd
 ````
 
----
+
 
 ### 2. Rendszer frissítése (ajánlott)
 
@@ -131,7 +128,7 @@ Ha szükséges, indítsa újra:
 reboot
 ```
 
----
+
 
 ### 3. Időzóna + időszerver beállítása
 
@@ -163,9 +160,9 @@ nano /etc/chrony/chrony.conf
 pool time.vipy.hu iburst
 ```
 
-> ℹ️ Ajánlott, hogy a többi `pool` / `server` sor törlésre vagy kikommentelésre kerüljön, hogy csak a **time.vipy.hu** maradjon.
+:::info ℹ️ Ajánlott, hogy a többi `pool` / `server` sor törlésre vagy kikommentelésre kerüljön, hogy csak a **time.vipy.hu** maradjon.
 
-![Chrony beállítás – time.vipy.hu](./images/linux-chrony-conf.png)
+![Chrony beállítás – time.vipy.hu](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/hu/virtual-private-server/images/linux-chrony-conf.png)
 *Példa beállítás a `time.vipy.hu` időszerverhez.*
 
 3. Mentés után indítsa újra a chrony-t:
@@ -174,8 +171,8 @@ pool time.vipy.hu iburst
 systemctl restart chrony
 ```
 
-> ℹ️ Fontos: Időszervernek minden esetben a `time.vipy.hu` legyen beállítva, mert csak ez engedélyezett.
+:::info ℹ️ Fontos: Időszervernek minden esetben a `time.vipy.hu` legyen beállítva, mert csak ez engedélyezett.
 
----
+
 
 ```

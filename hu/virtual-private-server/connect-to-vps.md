@@ -8,7 +8,7 @@ Ez az útmutató bemutatja, hogyan lehet
 csatlakozni **Windows alól**, akár **PuTTY**, akár **Parancssor (CMD / PowerShell)** használatával,
 valamint azt is, hogyan működik az **SSH kulcsos belépés**, ha az a **bérléskor lett beállítva**.
 
----
+
 
 ## Windows szerverhez csatlakozás RDP-n keresztül
 
@@ -32,7 +32,7 @@ valamint azt is, hogyan működik az **SSH kulcsos belépés**, ha az a **bérl�
   ```
 * Nyomjon **Entert**
 
----
+
 
 ### 2. Kapcsolati adatok megadása
 
@@ -42,7 +42,7 @@ valamint azt is, hogyan működik az **SSH kulcsos belépés**, ha az a **bérl�
   * *(Ajánlott: [WireGuard beállítása VPS-en](https://vipy.hu/hu/article/windows-rdp-wireguard))*
 * Kattintson a **Csatlakozás** gombra
 
----
+
 
 ### 3. Hitelesítés
 
@@ -52,9 +52,9 @@ valamint azt is, hogyan működik az **SSH kulcsos belépés**, ha az a **bérl�
   * **Jelszó:** e-mailben kapott jelszó
 * Sikeres hitelesítés után megjelenik a szerver asztala
 
-> ℹ️ Ha tanúsítványra vonatkozó figyelmeztetés jelenik meg, kattintson az **Igen** gombra.
+:::info ℹ️ Ha tanúsítványra vonatkozó figyelmeztetés jelenik meg, kattintson az **Igen** gombra.
 
----
+
 
 ### 4. Gyakori hibák
 
@@ -64,7 +64,7 @@ valamint azt is, hogyan működik az **SSH kulcsos belépés**, ha az a **bérl�
 * **Hozzáférés megtagadva**
   → Ellenőrizze a felhasználói jogosultságokat
 
----
+
 
 ## Linux szerverhez csatlakozás SSH-n keresztül (PuTTY)
 
@@ -74,7 +74,7 @@ valamint azt is, hogyan működik az **SSH kulcsos belépés**, ha az a **bérl�
   [https://www.putty.org/](https://www.putty.org/)
 * Telepítés után indítsa el a **PuTTY** alkalmazást
 
----
+
 
 ### 2. Kapcsolati adatok megadása
 
@@ -98,16 +98,16 @@ A **Session** menüpontban:
 
 Kattintson az **Open** gombra.
 
----
+
 
 ### 3. Bejelentkezés (jelszavas)
 
 * **login as:** → felhasználónév (pl. `root`)
 * **password:** → jelszó
 
-> ⚠️ Jelszó gépelésekor nem jelenik meg karakter – ez normális.
+:::warning ⚠️ Jelszó gépelésekor nem jelenik meg karakter – ez normális.
 
----
+
 
 ## Linux szerverhez csatlakozás SSH-n keresztül (CMD / PowerShell)
 
@@ -120,7 +120,7 @@ Kattintson az **Open** gombra.
 
   * Start → `powershell`
 
----
+
 
 ### 2. SSH parancs használata (jelszavas)
 
@@ -128,7 +128,7 @@ Kattintson az **Open** gombra.
 ssh root@<VPS_IP>
 ```
 
----
+
 
 ### 3. Első csatlakozás megerősítése
 
@@ -146,13 +146,13 @@ yes
 
 Ezután adja meg a jelszót.
 
----
+
 
 ## Linux szerverhez csatlakozás SSH kulccsal (jelszó nélkül)
 
 Ha a **bérlés során SSH publikus kulcs lett megadva a felületen**, akkor a szerver **nem jelszót kér**, hanem automatikusan a kulcs alapján enged be.
 
----
+
 
 ### 1. SSH kulcsos csatlakozás CMD / PowerShell alól
 
@@ -170,7 +170,7 @@ ssh -i C:\Users\Felhasznalo\.ssh\vipy_key root@<VPS_IP>
 
 Sikeres beállítás esetén **nem kér jelszót**.
 
----
+
 
 ### 2. SSH kulcsos csatlakozás PuTTY-val
 
@@ -197,7 +197,7 @@ PuTTY esetén a kulcsnak **PPK formátumúnak** kell lennie.
 
 Sikeres csatlakozás esetén **jelszó bekérése nélkül** belép a szerverre.
 
----
+
 
 ### 3. Fontos tudnivalók SSH kulcsos belépésnél
 
@@ -206,7 +206,7 @@ Sikeres csatlakozás esetén **jelszó bekérése nélkül** belép a szerverre.
 * Ha a kulcs elveszik, új kulcsot kell feltölteni a felületen vagy a rendszeren
 * Egy szerverhez **több kulcs is tartozhat**
 
----
+
 
 ## Gyakori SSH hibák
 
@@ -224,4 +224,4 @@ Sikeres csatlakozás esetén **jelszó bekérése nélkül** belép a szerverre.
   * VPN / WireGuard nem aktív
   * Hálózati elérés hiányzik
 
----
+

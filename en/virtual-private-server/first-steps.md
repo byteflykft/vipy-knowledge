@@ -2,9 +2,9 @@
 
 This guide explains the **required / strongly recommended** steps to complete **after your first login** to the VPS to keep it secure and stable.
 
-> ℹ️ For first access (RDP / SSH / SSH key), see: [Connect to a server (Windows RDP and Linux SSH)](https://vipy.hu/en/article/connect-to-vps).
+:::info ℹ️ For first access (RDP / SSH / SSH key), see: [Connect to a server (Windows RDP and Linux SSH)](https://vipy.hu/en/article/connect-to-vps).
 
----
+
 
 ## Recommendation: Use VPN only for RDP and SSH (WireGuard)
 
@@ -15,7 +15,7 @@ It is strongly recommended that whenever possible:
 WireGuard guide:  
 - https://vipy.hu/en/article/windows-rdp-wireguard
 
----
+
 
 ## Windows VPS – password change and basic setup
 
@@ -34,15 +34,15 @@ WireGuard guide:
 6. Save / finish:
    - **Next** → **Finish** *(button names may vary depending on the Windows version)*
 
-![Settings → Accounts → Sign-in options](./images/windows-signin-options.png)  
+![Settings → Accounts → Sign-in options](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/en/virtual-private-server/images/windows-signin-options.png)  
 *This is where you can find **Password → Change**.*
 
-![Change your password screen](./images/windows-change-password.png)  
+![Change your password screen](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/en/virtual-private-server/images/windows-change-password.png)  
 *Enter and confirm your new password.*
 
-> ℹ️ Recommended test: close your RDP session and reconnect using the **new password**.
+:::info ℹ️ Recommended test: close your RDP session and reconnect using the **new password**.
 
----
+
 
 ### 2. Run Windows Update
 
@@ -55,12 +55,12 @@ WireGuard guide:
 5. If prompted, restart:
    - **Restart now**
 
-![Windows Update – install updates / restart](./images/windows-update.png)  
+![Windows Update – install updates / restart](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/en/virtual-private-server/images/windows-update.png)  
 *If you see “Restart required”, click **Restart now**.*
 
-> ⚠️ Updates and restarts may be required in multiple rounds.
+:::warning ⚠️ Updates and restarts may be required in multiple rounds.
 
----
+
 
 ### 3. Configure time zone and time server
 
@@ -74,7 +74,7 @@ WireGuard guide:
 4. Set the time zone:
    - **Time zone: (UTC+01:00) Budapest**
 
-![Set time zone – Time & language → Date & time](./images/windows-date-time.png)  
+![Set time zone – Time & language → Date & time](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/en/virtual-private-server/images/windows-date-time.png)  
 *Set the **Time zone** here (e.g. (UTC+01:00) Budapest).*
 
 #### 3.2 Set the time server: `time.vipy.hu`
@@ -97,12 +97,12 @@ WireGuard guide:
 **Option B (classic path):**
 - **Control Panel → Date and Time → Internet Time → Change settings…**
 
-![Internet Time – set time.vipy.hu](./images/windows-internet-time-settings.png)  
+![Internet Time – set time.vipy.hu](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/en/virtual-private-server/images/windows-internet-time-settings.png)  
 *Enable **Synchronize with an Internet time server**, then set **Server: time.vipy.hu** → **Update now**.*
 
-> ℹ️ Important: The time server must always be set to `time.vipy.hu`, because only this server is allowed.
+:::info ℹ️ Important: The time server must always be set to `time.vipy.hu`, because only this server is allowed.
 
----
+
 
 ## Linux VPS – password change and basic setup
 
@@ -114,7 +114,7 @@ After logging in via SSH, run:
 passwd
 ````
 
----
+
 
 ### 2. Update the system (recommended)
 
@@ -131,7 +131,7 @@ If needed, reboot:
 reboot
 ```
 
----
+
 
 ### 3. Configure time zone and time server
 
@@ -163,9 +163,9 @@ nano /etc/chrony/chrony.conf
 pool time.vipy.hu iburst
 ```
 
-> ℹ️ It is recommended to remove or comment out other `pool` / `server` lines so that only **time.vipy.hu** remains.
+:::info ℹ️ It is recommended to remove or comment out other `pool` / `server` lines so that only **time.vipy.hu** remains.
 
-![Chrony configuration – time.vipy.hu](./images/linux-chrony-conf.png)
+![Chrony configuration – time.vipy.hu](https://raw.githubusercontent.com/byteflykft/vipy-knowledge/refs/heads/knowledge/en/virtual-private-server/images/linux-chrony-conf.png)
 *Example configuration for the `time.vipy.hu` time server.*
 
 3. After saving, restart chrony:
@@ -174,8 +174,8 @@ pool time.vipy.hu iburst
 systemctl restart chrony
 ```
 
-> ℹ️ Important: The time server must always be set to `time.vipy.hu`, because only this server is allowed.
+:::info ℹ️ Important: The time server must always be set to `time.vipy.hu`, because only this server is allowed.
 
----
+
 
 ```

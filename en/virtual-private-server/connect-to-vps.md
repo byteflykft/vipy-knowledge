@@ -31,7 +31,7 @@ and also how **SSH key-based authentication** works if it was configured **durin
   ```
 * Press **Enter**
 
----
+
 
 ### 2. Entering Connection Details
 
@@ -41,7 +41,7 @@ and also how **SSH key-based authentication** works if it was configured **durin
   * *(Recommended: [WireGuard setup on VPS](https://vipy.hu/en/article/windows-rdp-wireguard))*
 * Click **Connect**
 
----
+
 
 ### 3. Authentication
 
@@ -51,9 +51,9 @@ and also how **SSH key-based authentication** works if it was configured **durin
   * **Password:** the password received via email
 * After successful authentication, the server desktop will appear
 
-> ℹ️ If a certificate warning appears, click **Yes** to continue.
+:::info ℹ️ If a certificate warning appears, click **Yes** to continue.
 
----
+
 
 ### 4. Common Issues
 
@@ -63,7 +63,7 @@ and also how **SSH key-based authentication** works if it was configured **durin
 * **Access denied**
   → Verify user permissions
 
----
+
 
 ## Connecting to a Linux Server via SSH (PuTTY)
 
@@ -73,7 +73,7 @@ and also how **SSH key-based authentication** works if it was configured **durin
   [https://www.putty.org/](https://www.putty.org/)
 * After installation, start the **PuTTY** application
 
----
+
 
 ### 2. Entering Connection Details
 
@@ -97,16 +97,16 @@ In the **Session** menu:
 
 Click **Open**.
 
----
+
 
 ### 3. Login (Password-based)
 
 * **login as:** → username (e.g. `root`)
 * **password:** → password
 
-> ⚠️ No characters will appear while typing the password — this is normal.
+:::warning ⚠️ No characters will appear while typing the password — this is normal.
 
----
+
 
 ## Connecting to a Linux Server via SSH (CMD / PowerShell)
 
@@ -119,7 +119,7 @@ Click **Open**.
 
   * Start → `powershell`
 
----
+
 
 ### 2. Using SSH (Password-based)
 
@@ -127,7 +127,7 @@ Click **Open**.
 ssh root@<VPS_IP>
 ```
 
----
+
 
 ### 3. Confirming First Connection
 
@@ -145,13 +145,13 @@ yes
 
 Then enter the password.
 
----
+
 
 ## Connecting to a Linux Server Using SSH Key Authentication (Passwordless)
 
 If an **SSH public key was provided during the server rental process**, the server will **not ask for a password** and will authenticate automatically using the key.
 
----
+
 
 ### 1. SSH Key Authentication via CMD / PowerShell
 
@@ -169,7 +169,7 @@ ssh -i C:\Users\Username\.ssh\vipy_key root@<VPS_IP>
 
 With correct configuration, **no password will be requested**.
 
----
+
 
 ### 2. SSH Key Authentication Using PuTTY
 
@@ -196,7 +196,7 @@ When using PuTTY, the key must be in **PPK format**.
 
 If configured correctly, you will be logged in **without being prompted for a password**.
 
----
+
 
 ### 3. Important Notes About SSH Key Authentication
 
@@ -205,7 +205,7 @@ If configured correctly, you will be logged in **without being prompted for a pa
 * If the key is lost, a new key must be uploaded via the control panel or directly on the system
 * **Multiple SSH keys** can be associated with a single server
 
----
+
 
 ## Common SSH Errors
 
@@ -223,4 +223,4 @@ If configured correctly, you will be logged in **without being prompted for a pa
   * VPN / WireGuard is not active
   * Network connectivity is missing
 
----
+
