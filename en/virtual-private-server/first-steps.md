@@ -4,7 +4,6 @@ This guide explains the **required / strongly recommended** steps to complete **
 
 For first access (RDP / SSH / SSH key), see: [Connect to a server (Windows RDP and Linux SSH)](https://vipy.hu/en/article/connect-to-vps)
 
-
 ## Recommendation: Use VPN only for RDP and SSH (WireGuard)
 
 It is strongly recommended that whenever possible:
@@ -13,8 +12,6 @@ It is strongly recommended that whenever possible:
 
 WireGuard guide:  
 - [https://vipy.hu/en/article/windows-rdp-wireguard](https://vipy.hu/en/article/windows-rdp-wireguard)
-
-
 
 ## Windows VPS – password change and basic setup
 
@@ -41,8 +38,6 @@ WireGuard guide:
 
 :::info ℹ️ Recommended test: close your RDP session and reconnect using the new password. :::
 
-
-
 ### 2. Run Windows Update
 
 1. Open: **Settings**
@@ -58,8 +53,6 @@ WireGuard guide:
 *If you see “Restart required”, click **Restart now**.*
 
 :::warning ⚠️ Updates and restarts may be required in multiple rounds. :::
-
-
 
 ### 3. Configure time zone and time server
 
@@ -101,8 +94,6 @@ WireGuard guide:
 
 :::info ℹ️ Important: The time server must always be set to `time.vipy.hu`, because only this server is allowed. :::
 
-
-
 ## Linux VPS – password change and basic setup
 
 ### 1. Change password (recommended immediately)
@@ -112,8 +103,6 @@ After logging in via SSH, run:
 ```bash
 passwd
 ````
-
-
 
 ### 2. Update the system (recommended)
 
@@ -129,8 +118,6 @@ If needed, reboot:
 ```bash
 reboot
 ```
-
-
 
 ### 3. Configure time zone and time server
 
@@ -174,7 +161,3 @@ systemctl restart chrony
 ```
 
 :::info ℹ️ Important: The time server must always be set to `time.vipy.hu`, because only this server is allowed. :::
-
-
-
-```

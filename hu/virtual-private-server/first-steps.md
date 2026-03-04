@@ -13,8 +13,6 @@ Erősen ajánlott, hogy ahol lehet:
 WireGuard útmutató:  
 - [https://vipy.hu/hu/article/windows-rdp-wireguard](https://vipy.hu/hu/article/windows-rdp-wireguard)
 
-
-
 ## Windows VPS – jelszócsere és alap beállítások
 
 ### 1. Jelszócsere (Administrator) – Beállításokból / Settingsből
@@ -40,8 +38,6 @@ WireGuard útmutató:
 
 :::info ℹ️ Javasolt teszt: zárja be az RDP-t és csatlakozzon újra az új jelszóval. :::
 
-
-
 ### 2. Windows Update futtatása
 
 1. Nyissa meg: **Beállítások / Settings**
@@ -57,8 +53,6 @@ WireGuard útmutató:
 *Ha “Restart required / Újraindítás szükséges” látható, kattintson a **Restart now / Újraindítás most** gombra.*
 
 :::warning ⚠️ Előfordulhat, hogy több körben is lesz frissítés + újraindítás. :::
-
-
 
 ### 3. Időzóna + időszerver beállítása
 
@@ -100,8 +94,6 @@ WireGuard útmutató:
 
 :::info ℹ️ Fontos: Időszervernek minden esetben a `time.vipy.hu` legyen beállítva, mert csak ez engedélyezett. :::
 
-
-
 ## Linux VPS – jelszócsere és alap beállítások
 
 ### 1. Jelszó megváltoztatása (ajánlott azonnal)
@@ -111,8 +103,6 @@ SSH belépés után futtassa:
 ```bash
 passwd
 ````
-
-
 
 ### 2. Rendszer frissítése (ajánlott)
 
@@ -128,8 +118,6 @@ Ha szükséges, indítsa újra:
 ```bash
 reboot
 ```
-
-
 
 ### 3. Időzóna + időszerver beállítása
 
@@ -173,7 +161,3 @@ systemctl restart chrony
 ```
 
 :::info ℹ️ Fontos: Időszervernek minden esetben a `time.vipy.hu` legyen beállítva, mert csak ez engedélyezett. :::
-
-
-
-```
