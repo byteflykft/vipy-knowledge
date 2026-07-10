@@ -4,7 +4,7 @@ The purpose of the dedicated filters is that on a given port range, **only traff
 
 The filters are **active by default** on the specified port ranges; no configuration is required.
 
-:::warning **Important rule:** run your games, VPNs, and applications **within** the specified port ranges, and don't mix different protocols into a single profile's range. The filter will drop traffic from a foreign application.:::
+:::warning Important rule: run your games, VPNs, and applications **within** the specified port ranges, and don't mix different protocols into a single profile's range. The filter will drop traffic from a foreign application.:::
 
 ## Protected mode - available free of charge
 

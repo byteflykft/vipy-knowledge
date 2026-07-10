@@ -151,7 +151,7 @@ You can choose between two operating modes:
 | **Sensor / dynamic mode** | The external, stricter protection is only active during an attack | For services where minimal intervention is desired under normal conditions |
 | **Always-on protection** | Traffic always passes through the protection profiles | For critical game, voice, VPN, or TCP services where a route change is undesirable |
 
-:::success For critical TCP services (e.g. Minecraft, FiveM), **always-on protection** may be preferable: if protection only activates during an attack, the route change and TCP authentication can disrupt existing connections as well.:::
+:::success For critical TCP services (e.g. Minecraft, FiveM), always-on protection may be preferable: if protection only activates during an attack, the route change and TCP authentication can disrupt existing connections as well.:::
 
 :::warning Extra Protected mode is subject to separate [technical limitations](https://vipy.hu/en/article/limitations) (double TCP handshake in always-on mode, CDN incompatibility, DNS resolver restrictions during an attack).:::
 
@@ -259,8 +259,8 @@ These require application-side protection: rate limiting, CAPTCHA, queuing, logi
 
 ## Practical recommendations
 
-1. **Always run game servers within the supported port range.** If the service doesn't run on the correct port, the dedicated profile won't apply to it.
+1. **Always run game and other servers within the supported port range.** If the service doesn't run on the correct port, the dedicated profile won't apply to it.
 2. **Don't mix multiple applications into the same profile.** For example, don't run a custom UDP application in the FiveM or Source Engine port range.
-3. **Always-on Extra Protection is recommended for critical TCP services** (except behind a CDN) - this reduces disruptions caused by route changes.
+3. **Always-on Extra Protection is recommended for critical TCP services** (except behind a CDN), as this reduces disruptions caused by route changes.
 4. **Speedtest and ping results during an attack are not reliable.** Filtering deliberately restricts intensive or suspicious traffic patterns at such times.
 5. **Request a custom profile for custom applications.** If the protocol doesn't fit the existing game or application profiles, it's best to request a profile in advance.

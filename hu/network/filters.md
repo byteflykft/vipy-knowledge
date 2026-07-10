@@ -5,7 +5,7 @@ A dedikált szűrők lényege, hogy az adott porttartományon **csak az elvárt 
 
 A szűrők a megadott porttartományokon **alapértelmezetten aktívak**, konfiguráció nem szükséges.
 
-:::warning **Fontos szabály:** a játékokat, VPN-eket és alkalmazásokat a megadott porttartományokon **belül** futtasd és ne keverj különböző protokollokat egy profil tartományába. Idegen alkalmazás forgalmát a szűrő eldobja.:::
+:::warning Fontos szabály: a játékokat, VPN-eket és alkalmazásokat a megadott porttartományokon belül futtasd és ne keverj különböző protokollokat egy profil tartományába. Idegen alkalmazás forgalmát a szűrő eldobja.:::
 
 ## Védett mód - díjmentesen elérhető
 

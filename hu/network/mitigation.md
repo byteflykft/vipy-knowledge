@@ -73,7 +73,8 @@ A **Védetlen** és a normál **Védett** szolgáltatásoknál kizárólag a **S
 
 ### 🔓 Védetlen
 
-A csomag **semmilyen szűrésen nem esik keresztül** - nincs XDP, nftables, külső scrubbing vagy alkalmazásprofil alapú tisztítás. A szerver a lehető legközvetlenebb módon kapja a forgalmat.
+A csomag **semmilyen szűrésen nem e
+ keresztül** - nincs XDP, nftables, külső scrubbing vagy alkalmazásprofil alapú tisztítás. A szerver a lehető legközvetlenebb módon kapja a forgalmat.
 
 Következmények:
 
@@ -150,7 +151,7 @@ Két üzemmód közül választhatsz:
 | **Szenzor / dynamic mode** | A külső, szigorúbb védelem csak támadás alatt aktív | Ahol normál állapotban a lehető legkevesebb beavatkozás kell |
 | **Állandó / always on védelem** | A forgalom mindig a védelmi profilokon halad át | Kritikus game, voice, VPN vagy TCP-szolgáltatáshoz, ahol az útvonalváltás nem kívánatos |
 
-:::success Kritikus TCP-szolgáltatásnál (pl. Minecraft, FiveM) az **állandó védelem** előnyösebb lehet: ha a védelem csak támadáskor aktiválódik, az útvonalváltás és a TCP-hitelesítés a meglévő kapcsolatokat is megszakíthatja.:::
+:::success Kritikus TCP-szolgáltatásnál (pl. Minecraft, FiveM) az állandó védelem előnyösebb lehet: ha a védelem csak támadáskor aktiválódik, az útvonalváltás és a TCP-hitelesítés a meglévő kapcsolatokat is megszakíthatja.:::
 
 :::warning Az Extra védett módra külön [technikai limitációk](https://vipy.hu/hu/article/limitations) vonatkoznak (dupla TCP-kézfogás állandó módban, CDN-inkompatibilitás, DNS-resolver korlátozások támadás alatt).:::
 
@@ -258,8 +259,8 @@ Ezekhez alkalmazásoldali védelem szükséges: rate limit, CAPTCHA, queue, logi
 
 ## Gyakorlati ajánlások
 
-1. **Game szervereket mindig a támogatott porttartományban futtass.** Ha a szolgáltatás nem a megfelelő porton fut, a dedikált profil nem érvényesül rá.
+1. **Játék és egyéb szervereket mindig a támogatott porttartományban futtass.** Ha a szolgáltatás nem a megfelelő porton fut, a dedikált profil nem érvényesül rá.
 2. **Ne keverj többféle alkalmazást ugyanabba a profilba.** Például ne fusson egyedi UDP-alkalmazás FiveM vagy Source Engine porttartományban.
-3. **Kritikus TCP-szolgáltatáshoz állandó extra védelem ajánlott** (kivéve CDN mögött) - ez csökkenti az útvonalváltásból eredő megszakításokat.
+3. **Kritikus TCP-szolgáltatáshoz állandó extra védelem ajánlott** (kivéve CDN mögött), ez csökkenti az útvonalváltásból eredő megszakításokat.
 4. **Támadás alatti speedtest és ping nem mérvadó.** A szűrés ilyenkor szándékosan korlátozza az intenzív vagy gyanús forgalmi mintákat.
 5. **Egyedi alkalmazáshoz kérj egyedi profilt.** Ha a protokoll nem illeszkedik a meglévő játék- vagy alkalmazásprofilokhoz, előre érdemes profilt kérni.

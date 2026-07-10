@@ -4,7 +4,7 @@ This page describes **intentional and documented** behaviors that result from ho
 
 A detailed description of the network modes (Unprotected, Protected, Extra Protected) can be found here: [How does the protection work?](https://vipy.hu/en/article/mitigation)
 
-:::warning Most of the limitations listed here apply **exclusively to the Extra Protected** IP range (`45.146.6.0/24`). For regular **Protected** mode, only what's described in the "Protected mode - sensor operation" section below applies.:::
+:::warning Most of the limitations listed here apply **exclusively to the Extra Protected** IP range (`45.146.6.0/24`). For regular Protected mode, only what's described in the "Protected mode - sensor operation" section below applies.:::
 
 ## Protected mode - sensor operation
 
@@ -89,7 +89,7 @@ Extra Protection operates primarily at the network and transport layers (L3/L4),
 
 These require application-side protection: rate limiting, CAPTCHA, queuing, login protection, or a custom L7 filter.
 
-:::info **FiveM L7 filter:** available on request, and represents stricter filtering - it caches the public JSON endpoints (`/info.json`, `/players.json`, `/dynamic.json`) for 1 minute (custom modded content is not cached), enforces a strict query limit, and **bans clients that exceed the limit for 8 hours**.:::
+:::info FiveM L7 filter: available on request, and represents stricter filtering - it caches the public JSON endpoints (`/info.json`, `/players.json`, `/dynamic.json`) for 1 minute (custom modded content is not cached), enforces a strict query limit, and bans clients that exceed the limit for 8 hours.:::
 
 ## Practical recommendations
 

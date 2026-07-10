@@ -4,7 +4,7 @@ Ez az oldal a védelmi rendszereink működéséből fakadó, **szándékos és 
 
 A hálózati módok (Védetlen, Védett, Extra védett) részletes leírása itt található: [Hogyan működik a védelem?](https://vipy.hu/hu/article/mitigation)
 
-:::warning Az itt felsorolt limitációk többsége **kizárólag az Extra védett** IP-tartományra (`45.146.6.0/24`) vonatkozik. A sima **Védett** módra csak a lenti „Védett mód - szenzor üzemmód" szekcióban leírtak érvényesek.:::
+:::warning Az itt felsorolt limitációk többsége kizárólag az Extra védett IP-tartományra (`45.146.6.0/24`) vonatkozik. A sima Védett módra csak a lenti „Védett mód - szenzor üzemmód" szekcióban leírtak érvényesek.:::
 
 ## Védett mód - szenzor üzemmód
 
@@ -23,7 +23,7 @@ Az alábbi forgalomtípusok sebességkorlátozás alá eshetnek, de **kizáróla
 
 ### DNS-resolver korlátozások
 
-DNS-alapú támadás alatt a DNS-forgalom kizárólag az alábbi ismert publikus resolverektől engedélyezett:
+A DNS-forgalom kizárólag az alábbi ismert publikus resolverektől engedélyezett, függetlenül van-e támadás:
 
 | Resolver | Szolgáltató |
 | --- | --- |
@@ -39,7 +39,7 @@ A listán kívüli resolverektől érkező DNS-lekérdezések **eldobásra kerü
 
 Extra védelem alatt a TCP-forgalom hitelesítésen megy keresztül: az új TCP-munkamenet **legelső csomagja reset-et kap**, és a kliensnek egy **második kézfogással** kell felépítenie a kapcsolatot. Állandó (always on) védelmi módban ez minden új kapcsolatra érvényes.
 
-:::info Ez a viselkedés szándékos, nem hibás konfiguráció jele. A szabványos TCP-kliensek automatikusan újrapróbálkoznak, a hatás jellemzően **1 másodperc alatti** - a kliens oldalán csak egy rövid újrapróbálkozásként látszik.:::
+:::info Ez a viselkedés szándékos, nem hibás konfiguráció jele. A szabványos TCP-kliensek automatikusan újrapróbálkoznak, a hatás jellemzően 1 másodperc alatti - a kliens oldalán csak egy rövid újrapróbálkozásként látszik.:::
 
 Különösen figyelni kell az alábbiakra, mert ezeknél a TCP-reset hibát okozhat:
 
@@ -48,9 +48,9 @@ Különösen figyelni kell az alábbiakra, mert ezeknél a TCP-reset hibát okoz
 - egyedi TCP-protokollok,
 - nem szabványos TCP-viselkedésű alkalmazások.
 
-:::danger **CDN-inkompatibilitás:** a Cloudflare és más CDN-szolgáltatók jellemzően **nem próbálkoznak újra** TCP reset után. Ha a forgalmad CDN-en keresztül érkezik, az állandó védelem **megszakítja ezt az útvonalat**. Ez ismert inkompatibilitás. CDN mögötti szolgáltatáshoz válaszd a dinamikus szenzor módot, vagy egyeztess velünk egyedi profilról.:::
+:::danger CDN-inkompatibilitás: a Cloudflare és más CDN-szolgáltatók jellemzően nem próbálkoznak újra TCP reset után. Ha a forgalmad CDN-en keresztül érkezik, az állandó védelem megszakítja ezt az útvonalat. Ez ismert inkompatibilitás. CDN mögötti szolgáltatáshoz válaszd a dinamikus szenzor módot, vagy egyeztess velünk egyedi profilról.:::
 
-:::success Kritikus TCP-szolgáltatásnál (CDN nélkül) ugyanakkor az **állandó extra védelem** ajánlott: ha a védelem csak támadáskor aktiválódik, az útvonalváltás és a TCP-hitelesítés a **meglévő** kapcsolatokat is megszakíthatja.:::
+:::success Kritikus TCP-szolgáltatásnál (CDN nélkül) ugyanakkor az állandó extra védelem ajánlott: ha a védelem csak támadáskor aktiválódik, az útvonalváltás és a TCP-hitelesítés a meglévő kapcsolatokat is megszakíthatja.:::
 
 ### Sebességkorlátozás aktív támadás alatt
 
@@ -89,7 +89,7 @@ Az Extra védelem elsősorban hálózati és transport rétegen (L3/L4) működi
 
 Ezekhez alkalmazásoldali védelem szükséges: rate limit, CAPTCHA, queue, login protection vagy egyedi L7 szűrés.
 
-:::info **FiveM L7 szűrő:** kérésre elérhető, és szigorúbb viselkedést jelent - 1 percre gyorsítótárazza a publikus JSON végpontokat (`/info.json`, `/players.json`, `/dynamic.json`; egyedi moddolt tartalom nem kerül cache-be), szigorú lekérdezési limitet érvényesít, és a limitet túllépő klienseket **8 órára tiltja**.:::
+:::info FiveM L7 szűrő: kérésre elérhető, és szigorúbb viselkedést jelent - 1 percre gyorsítótárazza a publikus JSON végpontokat (`/info.json`, `/players.json`, `/dynamic.json`; egyedi moddolt tartalom nem kerül cache-be), szigorú lekérdezési limitet érvényesít, és a limitet túllépő klienseket 8 órára tiltja.:::
 
 ## Gyakorlati ajánlások
 
