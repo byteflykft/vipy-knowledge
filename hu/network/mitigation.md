@@ -73,8 +73,7 @@ A **Védetlen** és a normál **Védett** szolgáltatásoknál kizárólag a **S
 
 ### 🔓 Védetlen
 
-A csomag **semmilyen szűrésen nem e
- keresztül** - nincs XDP, nftables, külső scrubbing vagy alkalmazásprofil alapú tisztítás. A szerver a lehető legközvetlenebb módon kapja a forgalmat.
+A csomag **semmilyen szűrésen nem megy keresztül** - nincs XDP, nftables, külső scrubbing vagy alkalmazásprofil alapú tisztítás. A szerver a lehető legközvetlenebb módon kapja a forgalmat.
 
 Következmények:
 
