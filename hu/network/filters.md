@@ -34,6 +34,7 @@ Az **Extra védett** IP-tartományon (`45.146.6.0/24`) elérhető kiterjedt ját
 | Factorio | UDP | `34100–34200` | Factorio multiplayer UDP forgalomhoz. |
 | Palworld | UDP | `8200–8300` | Palworld szerverforgalomhoz. |
 | Hytale / QUIC | UDP | `5520–5620` | Külső Extra védelmi környezetben elérhető / egyeztetendő profil. |
+| Általános | UDP / TCP | `7777-8000` | Általános játékszerver forgalomhoz. |
 
 ### Kiemelt tudnivalók
 

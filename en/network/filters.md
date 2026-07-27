@@ -33,6 +33,8 @@ Extended game profiles available on the **Extra Protected** IP range (`45.146.6.
 | Factorio | UDP | `34100–34200` | For Factorio multiplayer UDP traffic. |
 | Palworld | UDP | `8200–8300` | For Palworld server traffic. |
 | Hytale / QUIC | UDP | `5520–5620` | Available in the external Extra Protected environment / profile to be coordinated. |
+| Generic | UDP / TCP | `7777-8000` | For generic gameserver traffic. |
+
 
 ### Highlighted notes
 
