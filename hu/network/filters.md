@@ -17,6 +17,16 @@ A normál **Védett** mód (XDP/nftables) jelenleg az alábbi profilokra van opt
 | Minecraft Java | TCP | `25565–26000` | Csak Java Edition protokollnak megfelelő forgalom. |
 | Minecraft Bedrock | UDP | `19100–19200` | Bedrock Edition UDP forgalom. |
 | Valve Source / A2S | UDP | `27000–28000` | CS2, TF2, Garry's Mod és egyéb Source alapú szerverekhez |
+| Multi Theft Auto | TCP/UDP | `22000–23000` | HTTP-nél L7 proxy + flood szűrés |
+
+| Alkalmazás | Protokoll | Alapértelmezett portok | Megjegyzés |
+|---|---|---:|---|
+| WireGuard | UDP | `51000–52999` | Csak WireGuard specifikus UDP forgalom. |
+| OpenVPN | UDP | `1194–1294` | Csak UDP OpenVPN. TCP OpenVPN-hez nincs dedikált OpenVPN filter. |
+| SSH | TCP | `22` | Csak SSH protokollnak megfelelő forgalom. Egyedi SSH porthoz külön egyeztetés szükséges. |
+| TeamSpeak 3 | UDP | `9000–9999` | Voice forgalom. Fájlmegosztás és query portok TCP védelem alá eshetnek. |
+| HTTP | TCP | `80` | L4/TCP védelem; nem teljes Layer 7 HTTP botvédelem. |
+| HTTPS | TCP | `443` | L4/TCP védelem; nem teljes Layer 7 HTTPS botvédelem. |
 
 ## Extra védett - 45.146.6.0/24
 
@@ -35,6 +45,8 @@ Az **Extra védett** IP-tartományon (`45.146.6.0/24`) elérhető kiterjedt ját
 | Palworld | UDP | `8200–8300` | Palworld szerverforgalomhoz. |
 | Hytale / QUIC | UDP | `5520–5620` | Külső Extra védelmi környezetben elérhető / egyeztetendő profil. |
 | Általános | UDP / TCP | `7777-8000` | Általános játékszerver forgalomhoz. |
+| Multi Theft Auto | TCP/UDP | `22000–23000` | HTTP-nél L7 proxy + flood szűrés |
+
 
 ### Kiemelt tudnivalók
 

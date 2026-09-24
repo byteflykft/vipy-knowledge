@@ -16,6 +16,16 @@ Regular **Protected** mode (XDP/nftables) is currently optimized for the followi
 | Minecraft Java | TCP | `25565–26000` | Only traffic matching the Java Edition protocol. |
 | Minecraft Bedrock | UDP | `19100–19200` | Bedrock Edition UDP traffic. |
 | Valve Source / A2S | UDP | `27000–28000` | For CS2, TF2, Garry's Mod, and other Source-based servers |
+| Multi Theft Auto | TCP/UDP | `22000–23000` | Proxied HTTP layer and malformed traffic |
+
+| Application | Protocol | Default ports | Note |
+|---|---|---:|---|
+| WireGuard | UDP | `51000–52999` | WireGuard-specific UDP traffic only. |
+| OpenVPN | UDP | `1194–1294` | UDP OpenVPN only. There is no dedicated OpenVPN filter for TCP OpenVPN. |
+| SSH | TCP | `22` | Only traffic matching the SSH protocol. A custom SSH port requires separate coordination. |
+| TeamSpeak 3 | UDP | `9000–9999` | Voice traffic. File sharing and query ports fall under general TCP protection. |
+| HTTP | TCP | `80` | L4/TCP protection; not full Layer 7 HTTP bot protection. |
+| HTTPS | TCP | `443` | L4/TCP protection; not full Layer 7 HTTPS bot protection. |
 
 ## Extra Protected - 45.146.6.0/24
 
@@ -34,6 +44,7 @@ Extended game profiles available on the **Extra Protected** IP range (`45.146.6.
 | Palworld | UDP | `8200–8300` | For Palworld server traffic. |
 | Hytale / QUIC | UDP | `5520–5620` | Available in the external Extra Protected environment / profile to be coordinated. |
 | Generic | UDP / TCP | `7777-8000` | For generic gameserver traffic. |
+| Multi Theft Auto | TCP/UDP | `22000–23000` | Proxied HTTP layer and malformed traffic |
 
 
 ### Highlighted notes
