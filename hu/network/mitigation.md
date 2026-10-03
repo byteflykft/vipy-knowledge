@@ -47,20 +47,22 @@ VIPY / AS215261
 3) EXTRA VEDETT MOD
 
 VIPY / AS215261
-|-- Saját DDoS védelem
-|
-`-- AS214243
-|    `-- AS203446
-|        |-- Cogent / AS174
-|        |-- GTT / AS3257
-|        |-- Zayo / AS6461
-|        |-- Liberty / AS6830
-|        `-- RETN / AS9002
-|
-`-- AS215362
-        |-- Cogent / AS174
-        |-- Orange RO / AS8953
-        `-- RETN / AS9002
+├── Saját DDoS védelem
+│
+├── AS214243 
+│   └── AS203446 / SMARTNET
+│       ├── DE-CIX Frankfurt / AS6695
+│       ├── MegaIX Frankfurt / AS9033
+│       ├── AS6830 / Liberty
+│       ├── AS3257 / GTT
+│       ├── AS5511 / Orange
+│       └── AS6461 / Zayo
+│
+└── AS215362
+    └── AS9002 / RETN
+        ├── AS6453 / Tata
+        ├── AS12956 / Telxius
+        └── AS6762 / Sparkle
 ```
 
 A **Védetlen** és a normál **Védett** szolgáltatásoknál kizárólag a **SzerverPlex / Rackhost** útvonalpárt használjuk. A két külső tranzit/védelmi irányt (AS214243, AS215362) csak az **Extra védett** IP-tartománynál vesszük igénybe:
@@ -88,7 +90,7 @@ A **saját fejlesztésű XDP/nftables alapú védelmünket** jelenti.
 | Paraméter | Érték |
 |---|---:|
 | Sávszélesség-alapú kapacitás | max. **80 Gbps** |
-| Csomagszám-alapú kapacitás | **80–100 Mpps** |
+| Csomagszám-alapú kapacitás | **20–100 Mpps** |
 
 Jelenleg dedikált profillal támogatott:
 
@@ -133,7 +135,7 @@ A Védett módban leírtak **plusz** a két külső tranzit szolgáltató (AS214
 
 | Paraméter | Érték |
 |---|---:|
-| Védelmi kapacitás | akár **2 Tbps** |
+| Védelmi kapacitás | akár **6 Tbps** |
 | Csomagszám-alapú kapacitás | akár **1 Gpps** |
 
 Az Extra védett módnál elérhető:
@@ -159,7 +161,7 @@ Két üzemmód közül választhatsz:
 | | Védetlen | Védett | Extra védett |
 | --- | --- | --- | --- |
 | Szűrés | Nincs | XDP/nftables (saját) | XDP/nftables + külső scrubbing |
-| Kapacitás | - | 80 Gbps / 80–100 Mpps | 2 Tbps / 1 Gpps |
+| Kapacitás | - | 80 Gbps / 20–100 Mpps | 6 Tbps / 1 Gpps |
 | Útvonal | SzerverPlex/Rackhost | SzerverPlex/Rackhost | + AS214243, AS215362 |
 | Játékprofilok | - | FiveM, Minecraft, A2S/Source | Kiterjedt (10+ játék és alkalmazás) |
 | Üzemmód | - | Szenzor | Dinamikus szenzor **vagy** állandó |

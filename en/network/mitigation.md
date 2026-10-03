@@ -47,20 +47,22 @@ VIPY / AS215261
 3) EXTRA PROTECTED MODE
 
 VIPY / AS215261
-|-- Our own DDoS protection
-|
-`-- AS214243
-|    `-- AS203446
-|        |-- Cogent / AS174
-|        |-- GTT / AS3257
-|        |-- Zayo / AS6461
-|        |-- Liberty / AS6830
-|        `-- RETN / AS9002
-|
-`-- AS215362
-        |-- Cogent / AS174
-        |-- Orange RO / AS8953
-        `-- RETN / AS9002
+├── Our own DDoS protection
+│
+├── AS214243 
+│   └── AS203446 / SMARTNET
+│       ├── DE-CIX Frankfurt / AS6695
+│       ├── MegaIX Frankfurt / AS9033
+│       ├── AS6830 / Liberty
+│       ├── AS3257 / GTT
+│       ├── AS5511 / Orange
+│       └── AS6461 / Zayo
+│
+└── AS215362
+    └── AS9002 / RETN
+        ├── AS6453 / Tata
+        ├── AS12956 / Telxius
+        └── AS6762 / Sparkle
 ```
 
 For **Unprotected** and regular **Protected** services, we exclusively use the **SzerverPlex / Rackhost** route pair. The two external transit/protection directions (AS214243, AS215362) are only used for the **Extra Protected** IP range:
@@ -89,7 +91,7 @@ This is our **own, in-house developed XDP/nftables-based protection**.
 | Parameter | Value |
 |---|---:|
 | Bandwidth-based capacity | up to **80 Gbps** |
-| Packet-rate-based capacity | **80–100 Mpps** |
+| Packet-rate-based capacity | **20–100 Mpps** |
 
 Currently supported with a dedicated profile:
 
@@ -134,7 +136,7 @@ Everything described in Protected mode, **plus** the use of the two external tra
 
 | Parameter | Value |
 |---|---:|
-| Protection capacity | up to **2 Tbps** |
+| Protection capacity | up to **6 Tbps** |
 | Packet-rate-based capacity | up to **1 Gpps** |
 
 Available in Extra Protected mode:
@@ -160,7 +162,7 @@ You can choose between two operating modes:
 | | Unprotected | Protected | Extra Protected |
 | --- | --- | --- | --- |
 | Filtering | None | XDP/nftables (in-house) | XDP/nftables + external scrubbing |
-| Capacity | - | 80 Gbps / 80–100 Mpps | 2 Tbps / 1 Gpps |
+| Capacity | - | 80 Gbps / 20–100 Mpps | 6 Tbps / 1 Gpps |
 | Route | SzerverPlex/Rackhost | SzerverPlex/Rackhost | + AS214243, AS215362 |
 | Game profiles | - | FiveM, Minecraft, A2S/Source | Extensive (10+ games and applications) |
 | Mode | - | Sensor | Dynamic sensor **or** always-on |
