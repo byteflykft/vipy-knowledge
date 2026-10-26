@@ -49,7 +49,7 @@ Extended game profiles available on the **Extra Protected** IP range (`45.146.6.
 
 ### Highlighted notes
 
-- **FiveM L7 filter:** available on request and represents stricter filtering - it caches the public JSON endpoints (`/info.json`, `/players.json`, `/dynamic.json`) for 1 minute (custom modded content is not cached), enforces a strict query limit, and **bans clients that exceed the limit for 8 hours**.
+- **FiveM L7 filter:** available on request and represents stricter filtering - it caches the public JSON endpoints (`/info.json`, `/players.json`, `/dynamic.json`) for 1 minute (custom modded content is not cached), enforces a strict query limit, and **bans clients that exceed the limit for 8 hours.In server.cfg `set sv_proxyIPRanges "77.90.4.162/32"` is needed**.
 - **Valve Source Engine:** game traffic can be well protected over UDP. For modded servers that serve client-side downloads, **FastDL is required**, since without it, downloads either won't work or will be very slow while the filter is active.
 
 ## Application filters

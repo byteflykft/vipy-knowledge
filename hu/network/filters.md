@@ -50,7 +50,7 @@ Az **Extra védett** IP-tartományon (`45.146.6.0/24`) elérhető kiterjedt ját
 
 ### Kiemelt tudnivalók
 
-- **FiveM L7 szűrő:** kérésre elérhető és szigorúbb szűrést jelent, 1 percre gyorsítótárazza a publikus JSON végpontokat (`/info.json`, `/players.json`, `/dynamic.json`; egyedi moddolt tartalom nem kerül cache-be), szigorú lekérdezési limitet érvényesít és a limitet túllépő klienseket **8 órára tiltja**.
+- **FiveM L7 szűrő:** kérésre elérhető és szigorúbb szűrést jelent, 1 percre gyorsítótárazza a publikus JSON végpontokat (`/info.json`, `/players.json`, `/dynamic.json`; egyedi moddolt tartalom nem kerül cache-be), szigorú lekérdezési limitet érvényesít és a limitet túllépő klienseket **8 órára tiltja, server.cfg-ben `set sv_proxyIPRanges "77.90.4.162/32"` szükséges. **.
 - **Valve Source Engine:** a játékforgalom UDP-n védhető jól. A kliensoldali letöltéseket kiszolgáló moddolt szervereknél **FastDL kötelező**, mert enélkül a letöltés aktív szűrő mellett nem vagy csak nagyon lassan működik.
 
 ## Alkalmazásszűrők
